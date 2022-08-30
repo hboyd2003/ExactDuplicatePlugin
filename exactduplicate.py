@@ -1,17 +1,20 @@
 # -*- coding: utf-8 -*-
 
-# This is the Sort Multivalue Tags plugin for MusicBrainz Picard.
+# This is the Exact Duplicate plugin for MusicBrainz Picard.
 # Copyright © 2022 Harrison Boyd
 #
-# This program is free software; you can redistribute it and/or
-# modify it under the terms of the GNU General Public License
-# as published by the Free Software Foundation; either version 2
-# of the License, or (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>
 
 PLUGIN_NAME = 'Exact Duplicate'
 PLUGIN_AUTHOR = 'Harrison Boyd'
@@ -23,25 +26,14 @@ If the file does exist it brings it into picard and marks the album with an erro
 PLUGIN_VERSION = "0.5"
 PLUGIN_API_VERSIONS = ["2.0"]
 
-from picard.album import Album
-from enum import IntEnum
-from picard.ui.itemviews import BaseAction, register_album_action
-from picard.file import register_file_post_addition_to_track_processor
-from picard import file as picardFile
-from picard.formats.vorbis import FLACFile
-from picard import log
-from picard import config
-from picard.tagger import Tagger
-import picard.formats
 from os import path
-import time
-import subprocess
-import time
-from PyQt5 import (
-    QtCore,
-    QtGui,
-    QtWidgets,
-)
+
+from picard import log
+from picard.album import Album
+from picard.file import register_file_post_addition_to_track_processor
+from picard.ui.itemviews import BaseAction, register_album_action
+from PyQt5 import QtWidgets
+
 duplicates = []
 originals = []
 
