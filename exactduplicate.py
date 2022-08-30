@@ -18,8 +18,8 @@
 
 PLUGIN_NAME = 'Exact Duplicate'
 PLUGIN_AUTHOR = 'Harrison Boyd'
-PLUGIN_LICENSE = 'GPL-2.0-or-later'
-PLUGIN_LICENSE_URL = 'https://www.gnu.org/licenses/gpl-2.0.html'
+PLUGIN_LICENSE = 'GPL-3.0-or-later'
+PLUGIN_LICENSE_URL = 'https://www.gnu.org/licenses/gpl-3.0.html'
 PLUGIN_DESCRIPTION = '''
 Checks to see if any exact duplicate albums exist by taking the album you just added and using your naming script looks to see if any file already exists there.<br />
 If the file does exist it brings it into picard and marks the album with an error alerting you that there is a duplicate file'''
